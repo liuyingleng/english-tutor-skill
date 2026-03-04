@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "name": "技术英语词汇库",
+    "description": "编程和软件开发相关的英语词汇",
+    "version": "1.0",
+    "categories": ["programming", "java", "web", "database", "devops", "general"]
+  },
+  "programming_basics": [
+    {
+      "word": "variable",
+      "phonetic": "/ˈveəriəbl/",
+      "meaning": "变量",
+      "examples": [
+        "Declare a variable.",
+        "The variable stores a value."
+      ],
+      "related": ["constant", "parameter", "argument"]
+    },
+    {
+      "word": "function",
+      "phonetic": "/ˈfʌŋkʃn/",
+      "meaning": "函数",
+      "examples": [
+        "Call a function.",
+        "This function returns a string."
+      ],
+      "related": ["method", "procedure", "subroutine"]
+    },
+    {
+      "word": "loop",
+      "phonetic": "/luːp/",
+      "meaning": "循环",
+      "examples": [
+        "Use a for loop.",
+        "The loop iterates over the array."
+      ],
+      "related": ["iterate", "iteration", "recursive"]
+    },
+    {
+      "word": "array",
+      "phonetic": "/əˈreɪ/",
+      "meaning": "数组",
+      "examples": [
+        "Create an array.",
+        "Access array elements."
+      ],
+      "related": ["list", "collection", "index"]
+    },
+    {
+      "word": "object",
+      "phonetic": "/ˈɒbdʒɪkt/",
+      "meaning": "对象",
+      "examples": [
+        "Create an object.",
+        "The object has properties."
+      ],
+      "related": ["class", "instance", "inheritance"]
+    }
+  ],
+  "java_specific": [
+    {
+      "word": "class",
+      "phonetic": "/klɑːs/",
+      "meaning": "类",
+      "examples": [
+        "Define a class.",
+        "The class implements an interface."
+      ],
+      "related": ["object", "inheritance", "polymorphism"]
+    },
+    {
+      "word": "interface",
+      "phonetic": "/ˈɪntəfeɪs/",
+      "meaning": "接口",
+      "examples": [
+        "Implement an interface.",
+        "The interface defines methods."
+      ],
+      "related": ["abstract", "contract", "implementation"]
+    },
+    {
+      "word": "exception",
+      "phonetic": "/ɪkˈsepʃn/",
+      "meaning": "异常",
+      "examples": [
+        "Throw an exception.",
+        "Catch the exception."
+      ],
+      "related": ["error", "try-catch", "finally"]
+    },
+    {
+      "word": "thread",
+      "phonetic": "/θred/",
+      "meaning": "线程",
+      "examples": [
+        "Start a new thread.",
+        "Synchronize threads."
+      ],
+      "related": ["concurrency", "parallel", "synchronized"]
+    },
+    {
+      "word": "annotation",
+      "phonetic": "/ˌænəˈteɪʃn/",
+      "meaning": "注解",
+      "examples": [
+        "Use the @Override annotation.",
+        "Custom annotations."
+      ],
+      "related": ["metadata", "decorator", "attribute"]
+    }
+  ],
+  "web_development": [
+    {
+      "word": "request",
+      "phonetic": "/rɪˈkwest/",
+      "meaning": "请求",
+      "examples": [
+        "Send an HTTP request.",
+        "Handle the request."
+      ],
+      "related": ["response", "API", "endpoint"]
+    },
+    {
+      "word": "response",
+      "phonetic": "/rɪˈspɒns/",
+      "meaning": "响应",
+      "examples": [
+        "Return a response.",
+        "The response contains JSON."
+      ],
+      "related": ["request", "status code", "payload"]
+    },
+    {
+      "word": "endpoint",
+      "phonetic": "/ˈendpɔɪnt/",
+      "meaning": "端点，接口地址",
+      "examples": [
+        "Define an API endpoint.",
+        "Call the endpoint."
+      ],
+      "related": ["route", "URL", "path"]
+    },
+    {
+      "word": "authentication",
+      "phonetic": "/ɔːˌθentɪˈkeɪʃn/",
+      "meaning": "认证，身份验证",
+      "examples": [
+        "User authentication.",
+        "Token-based authentication."
+      ],
+      "related": ["authorization", "login", "credentials"]
+    },
+    {
+      "word": "deployment",
+      "phonetic": "/dɪˈplɔɪmənt/",
+      "meaning": "部署",
+      "examples": [
+        "Deploy the application.",
+        "Continuous deployment."
+      ],
+      "related": ["release", "production", "rollback"]
+    }
+  ],
+  "database": [
+    {
+      "word": "query",
+      "phonetic": "/ˈkwɪəri/",
+      "meaning": "查询",
+      "examples": [
+        "Execute a query.",
+        "Write SQL queries."
+      ],
+      "related": ["select", "search", "retrieve"]
+    },
+    {
+      "word": "transaction",
+      "phonetic": "/trænˈzækʃn/",
+      "meaning": "事务",
+      "examples": [
+        "Begin a transaction.",
+        "Commit the transaction."
+      ],
+      "related": ["commit", "rollback", "ACID"]
+    },
+    {
+      "word": "index",
+      "phonetic": "/ˈɪndeks/",
+      "meaning": "索引",
+      "examples": [
+        "Create an index.",
+        "The index improves performance."
+      ],
+      "related": ["primary key", "foreign key", "optimization"]
+    },
+    {
+      "word": "schema",
+      "phonetic": "/ˈskiːmə/",
+      "meaning": "模式，架构",
+      "examples": [
+        "Define the database schema.",
+        "Schema migration."
+      ],
+      "related": ["table", "structure", "design"]
+    }
+  ],
+  "common_verbs": [
+    {
+      "word": "implement",
+      "phonetic": "/ˈɪmplɪment/",
+      "meaning": "实现",
+      "examples": [
+        "Implement a feature.",
+        "Implement the interface."
+      ]
+    },
+    {
+      "word": "deploy",
+      "phonetic": "/dɪˈplɔɪ/",
+      "meaning": "部署",
+      "examples": [
+        "Deploy to production.",
+        "Deploy the changes."
+      ]
+    },
+    {
+      "word": "refactor",
+      "phonetic": "/ˌriːˈfæktə(r)/",
+      "meaning": "重构",
+      "examples": [
+        "Refactor the code.",
+        "Code refactoring."
+      ]
+    },
+    {
+      "word": "debug",
+      "phonetic": "/ˌdiːˈbʌɡ/",
+      "meaning": "调试",
+      "examples": [
+        "Debug the application.",
+        "Use a debugger."
+      ]
+    },
+    {
+      "word": "optimize",
+      "phonetic": "/ˈɒptɪmaɪz/",
+      "meaning": "优化",
+      "examples": [
+        "Optimize performance.",
+        "Code optimization."
+      ]
+    }
+  ],
+  "common_phrases": [
+    "code review - 代码审查",
+    "pull request - 拉取请求",
+    "merge conflict - 合并冲突",
+    "unit test - 单元测试",
+    "integration test - 集成测试",
+    "continuous integration - 持续集成",
+    "version control - 版本控制",
+    "best practice - 最佳实践",
+    "design pattern - 设计模式",
+    "tech stack - 技术栈"
+  ]
+}

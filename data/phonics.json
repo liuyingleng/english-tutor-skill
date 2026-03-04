@@ -1,0 +1,409 @@
+{
+  "vowels": {
+    "monophthongs": [
+      {
+        "symbol": "/iː/",
+        "description": "长元音，嘴唇扁平，舌位高前",
+        "examples": ["see", "tea", "meet", "beat"],
+        "chinese_similar": "类似"衣"，但更长",
+        "tips": "保持嘴型不变，发音要长"
+      },
+      {
+        "symbol": "/ɪ/",
+        "description": "短元音，舌位略低于/iː/",
+        "examples": ["sit", "bit", "ship", "hit"],
+        "chinese_similar": "介于"衣"和"诶"之间",
+        "tips": "短促有力，不要拖长"
+      },
+      {
+        "symbol": "/e/",
+        "description": "短元音，舌位中前",
+        "examples": ["bed", "red", "pen", "get"],
+        "chinese_similar": "类似"诶"",
+        "tips": "嘴巴半开，舌头放松"
+      },
+      {
+        "symbol": "/æ/",
+        "description": "短元音，嘴巴张大",
+        "examples": ["cat", "bad", "man", "hat"],
+        "chinese_similar": "介于"爱"和"诶"之间",
+        "tips": "嘴巴张大，下巴下降"
+      },
+      {
+        "symbol": "/ɑː/",
+        "description": "长元音，嘴巴大开，舌位低后",
+        "examples": ["car", "far", "park", "start"],
+        "chinese_similar": "类似"啊"，但更深沉",
+        "tips": "口腔打开，声音从喉咙发出"
+      },
+      {
+        "symbol": "/ɒ/",
+        "description": "短元音，嘴唇略圆",
+        "examples": ["hot", "dog", "box", "stop"],
+        "chinese_similar": "类似"哦"",
+        "tips": "嘴唇自然圆形，短促"
+      },
+      {
+        "symbol": "/ɔː/",
+        "description": "长元音，嘴唇圆形突出",
+        "examples": ["door", "more", "call", "ball"],
+        "chinese_similar": "类似"奥"，但更长",
+        "tips": "嘴唇向前突出，发音要长"
+      },
+      {
+        "symbol": "/ʊ/",
+        "description": "短元音，嘴唇圆形",
+        "examples": ["book", "good", "look", "put"],
+        "chinese_similar": "类似"乌"，但较短",
+        "tips": "嘴唇微圆，舌后部抬高"
+      },
+      {
+        "symbol": "/uː/",
+        "description": "长元音，嘴唇圆形突出",
+        "examples": ["food", "moon", "blue", "true"],
+        "chinese_similar": "类似"乌"，但更长",
+        "tips": "嘴唇用力向前，发音要长"
+      },
+      {
+        "symbol": "/ʌ/",
+        "description": "短元音，嘴巴半开",
+        "examples": ["cup", "but", "run", "love"],
+        "chinese_similar": "类似"啊"，但较短",
+        "tips": "嘴巴自然张开，短促有力"
+      },
+      {
+        "symbol": "/ɜː/",
+        "description": "长元音，舌位中央",
+        "examples": ["bird", "her", "turn", "work"],
+        "chinese_similar": "类似"额"，但卷舌",
+        "tips": "舌头卷起，发音要长"
+      },
+      {
+        "symbol": "/ə/",
+        "description": "中性元音，最常见的音",
+        "examples": ["about", "banana", "teacher", "sofa"],
+        "chinese_similar": "轻声的"额"",
+        "tips": "轻读，嘴巴放松，最自然的音"
+      }
+    ],
+    "diphthongs": [
+      {
+        "symbol": "/eɪ/",
+        "description": "双元音，从/e/滑向/ɪ/",
+        "examples": ["day", "make", "rain", "say"],
+        "chinese_similar": "类似"诶衣"",
+        "tips": "从第一个音滑向第二个音"
+      },
+      {
+        "symbol": "/aɪ/",
+        "description": "双元音，从/a/滑向/ɪ/",
+        "examples": ["my", "time", "like", "fly"],
+        "chinese_similar": "类似"啊衣"",
+        "tips": "嘴巴从大张到收小"
+      },
+      {
+        "symbol": "/ɔɪ/",
+        "description": "双元音，从/ɔ/滑向/ɪ/",
+        "examples": ["boy", "toy", "coin", "voice"],
+        "chinese_similar": "类似"奥衣"",
+        "tips": "嘴唇从圆到扁"
+      },
+      {
+        "symbol": "/aʊ/",
+        "description": "双元音，从/a/滑向/ʊ/",
+        "examples": ["now", "house", "out", "how"],
+        "chinese_similar": "类似"啊乌"",
+        "tips": "嘴巴从大张到收圆"
+      },
+      {
+        "symbol": "/əʊ/",
+        "description": "双元音，从/ə/滑向/ʊ/",
+        "examples": ["go", "home", "know", "show"],
+        "chinese_similar": "类似"欧"",
+        "tips": "从中性音滑向圆唇音"
+      },
+      {
+        "symbol": "/ɪə/",
+        "description": "双元音，从/ɪ/滑向/ə/",
+        "examples": ["here", "ear", "near", "beer"],
+        "chinese_similar": "类似"衣额"",
+        "tips": "第二个音要轻读"
+      },
+      {
+        "symbol": "/eə/",
+        "description": "双元音，从/e/滑向/ə/",
+        "examples": ["hair", "care", "there", "bear"],
+        "chinese_similar": "类似"诶额"",
+        "tips": "平滑过渡，第二个音轻"
+      },
+      {
+        "symbol": "/ʊə/",
+        "description": "双元音，从/ʊ/滑向/ə/",
+        "examples": ["poor", "sure", "tour"],
+        "chinese_similar": "类似"乌额"",
+        "tips": "现代英语中逐渐简化"
+      }
+    ]
+  },
+  "consonants": {
+    "plosives": [
+      {
+        "symbol": "/p/",
+        "description": "清辅音，双唇爆破",
+        "examples": ["pen", "cup", "happy", "stop"],
+        "chinese_similar": "类似"泼"的声母",
+        "tips": "送气，双唇紧闭后突然打开",
+        "voiced": false
+      },
+      {
+        "symbol": "/b/",
+        "description": "浊辅音，双唇爆破",
+        "examples": ["bed", "cab", "baby", "rub"],
+        "chinese_similar": "类似"波"的声母",
+        "tips": "声带振动，不送气",
+        "voiced": true
+      },
+      {
+        "symbol": "/t/",
+        "description": "清辅音，舌尖齿龈爆破",
+        "examples": ["tea", "cat", "better", "sit"],
+        "chinese_similar": "类似"特"的声母",
+        "tips": "舌尖抵住上齿龈，送气",
+        "voiced": false
+      },
+      {
+        "symbol": "/d/",
+        "description": "浊辅音，舌尖齿龈爆破",
+        "examples": ["dog", "bad", "ladder", "red"],
+        "chinese_similar": "类似"得"的声母",
+        "tips": "声带振动，不送气",
+        "voiced": true
+      },
+      {
+        "symbol": "/k/",
+        "description": "清辅音，舌后软腭爆破",
+        "examples": ["cat", "back", "school", "look"],
+        "chinese_similar": "类似"克"的声母",
+        "tips": "舌后部抵住软腭，送气",
+        "voiced": false
+      },
+      {
+        "symbol": "/g/",
+        "description": "浊辅音，舌后软腭爆破",
+        "examples": ["go", "bag", "bigger", "dog"],
+        "chinese_similar": "类似"哥"的声母",
+        "tips": "声带振动，不送气",
+        "voiced": true
+      }
+    ],
+    "fricatives": [
+      {
+        "symbol": "/f/",
+        "description": "清辅音，唇齿摩擦",
+        "examples": ["fish", "coffee", "laugh", "phone"],
+        "chinese_similar": "类似"夫"的声母",
+        "tips": "上齿轻咬下唇，气流摩擦",
+        "voiced": false
+      },
+      {
+        "symbol": "/v/",
+        "description": "浊辅音，唇齿摩擦",
+        "examples": ["very", "love", "have", "five"],
+        "chinese_similar": "无对应音",
+        "tips": "同/f/，但声带振动",
+        "voiced": true
+      },
+      {
+        "symbol": "/θ/",
+        "description": "清辅音，舌齿摩擦",
+        "examples": ["think", "bath", "three", "mouth"],
+        "chinese_similar": "无对应音",
+        "tips": "舌尖轻触上齿，气流通过",
+        "voiced": false
+      },
+      {
+        "symbol": "/ð/",
+        "description": "浊辅音，舌齿摩擦",
+        "examples": ["this", "that", "mother", "breathe"],
+        "chinese_similar": "无对应音",
+        "tips": "同/θ/，但声带振动",
+        "voiced": true
+      },
+      {
+        "symbol": "/s/",
+        "description": "清辅音，齿龈摩擦",
+        "examples": ["see", "bus", "city", "pass"],
+        "chinese_similar": "类似"思"的声母",
+        "tips": "舌尖接近上齿龈，气流通过",
+        "voiced": false
+      },
+      {
+        "symbol": "/z/",
+        "description": "浊辅音，齿龈摩擦",
+        "examples": ["zoo", "has", "easy", "buzz"],
+        "chinese_similar": "类似"资"的声母",
+        "tips": "同/s/，但声带振动",
+        "voiced": true
+      },
+      {
+        "symbol": "/ʃ/",
+        "description": "清辅音，齿龈后摩擦",
+        "examples": ["she", "fish", "nation", "wash"],
+        "chinese_similar": "类似"诗"的声母",
+        "tips": "舌尖上翘，嘴唇略圆",
+        "voiced": false
+      },
+      {
+        "symbol": "/ʒ/",
+        "description": "浊辅音，齿龈后摩擦",
+        "examples": ["vision", "measure", "usual", "beige"],
+        "chinese_similar": "类似"日"的声母",
+        "tips": "同/ʃ/，但声带振动",
+        "voiced": true
+      },
+      {
+        "symbol": "/h/",
+        "description": "清辅音，声门摩擦",
+        "examples": ["hat", "who", "behind", "hello"],
+        "chinese_similar": "类似"喝"的声母",
+        "tips": "气流从喉咙呼出",
+        "voiced": false
+      }
+    ],
+    "affricates": [
+      {
+        "symbol": "/tʃ/",
+        "description": "清辅音，齿龈后塞擦",
+        "examples": ["chair", "watch", "teacher", "catch"],
+        "chinese_similar": "类似"吃"的声母",
+        "tips": "先塞后擦，一个音",
+        "voiced": false
+      },
+      {
+        "symbol": "/dʒ/",
+        "description": "浊辅音，齿龈后塞擦",
+        "examples": ["jump", "age", "bridge", "judge"],
+        "chinese_similar": "类似"知"的声母",
+        "tips": "同/tʃ/，但声带振动",
+        "voiced": true
+      }
+    ],
+    "nasals": [
+      {
+        "symbol": "/m/",
+        "description": "浊辅音，双唇鼻音",
+        "examples": ["man", "come", "summer", "him"],
+        "chinese_similar": "类似"摸"的声母",
+        "tips": "双唇闭合，气流从鼻腔出",
+        "voiced": true
+      },
+      {
+        "symbol": "/n/",
+        "description": "浊辅音，齿龈鼻音",
+        "examples": ["no", "sun", "dinner", "ten"],
+        "chinese_similar": "类似"呢"的声母",
+        "tips": "舌尖抵上齿龈，气流从鼻腔出",
+        "voiced": true
+      },
+      {
+        "symbol": "/ŋ/",
+        "description": "浊辅音，软腭鼻音",
+        "examples": ["sing", "long", "think", "bank"],
+        "chinese_similar": "类似"昂"的韵尾",
+        "tips": "舌后部抵软腭，气流从鼻腔出",
+        "voiced": true
+      }
+    ],
+    "approximants": [
+      {
+        "symbol": "/l/",
+        "description": "浊辅音，齿龈边音",
+        "examples": ["leg", "ball", "hello", "feel"],
+        "chinese_similar": "类似"勒"的声母",
+        "tips": "舌尖抵上齿龈，气流从两侧出",
+        "voiced": true
+      },
+      {
+        "symbol": "/r/",
+        "description": "浊辅音，齿龈后近音",
+        "examples": ["red", "car", "sorry", "tree"],
+        "chinese_similar": "无对应音",
+        "tips": "舌尖卷起，不接触任何部位",
+        "voiced": true
+      },
+      {
+        "symbol": "/j/",
+        "description": "浊辅音，硬腭近音",
+        "examples": ["yes", "you", "yellow", "beyond"],
+        "chinese_similar": "类似"呀"的声母",
+        "tips": "舌面接近硬腭，不摩擦",
+        "voiced": true
+      },
+      {
+        "symbol": "/w/",
+        "description": "浊辅音，双唇软腭近音",
+        "examples": ["we", "water", "quick", "swim"],
+        "chinese_similar": "类似"乌"",
+        "tips": "嘴唇圆形突出，快速滑向下一个音",
+        "voiced": true
+      }
+    ]
+  },
+  "learning_order": [
+    "vowels.monophthongs.0-4",
+    "consonants.plosives.0-5",
+    "vowels.monophthongs.5-11",
+    "consonants.fricatives.0-8",
+    "vowels.diphthongs.0-7",
+    "consonants.affricates",
+    "consonants.nasals",
+    "consonants.approximants"
+  ],
+  "minimal_pairs": [
+    {
+      "phonics": ["/iː/", "/ɪ/"],
+      "pairs": [
+        ["sheep", "ship"],
+        ["beat", "bit"],
+        ["seat", "sit"],
+        ["heat", "hit"]
+      ]
+    },
+    {
+      "phonics": ["/æ/", "/e/"],
+      "pairs": [
+        ["bad", "bed"],
+        ["man", "men"],
+        ["sad", "said"],
+        ["pan", "pen"]
+      ]
+    },
+    {
+      "phonics": ["/p/", "/b/"],
+      "pairs": [
+        ["pen", "ben"],
+        ["pig", "big"],
+        ["pack", "back"],
+        ["rope", "robe"]
+      ]
+    },
+    {
+      "phonics": ["/f/", "/v/"],
+      "pairs": [
+        ["fan", "van"],
+        ["fine", "vine"],
+        ["safe", "save"],
+        ["leaf", "leave"]
+      ]
+    },
+    {
+      "phonics": ["/θ/", "/ð/"],
+      "pairs": [
+        ["think", "this"],
+        ["bath", "bathe"],
+        ["mouth", "mouthe"],
+        ["breath", "breathe"]
+      ]
+    }
+  ]
+}

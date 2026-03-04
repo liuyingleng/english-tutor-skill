@@ -1,0 +1,381 @@
+{
+  "metadata": {
+    "name": "高频词汇库",
+    "description": "最常用的2000个英语单词，按频率和难度分级",
+    "version": "1.0",
+    "total_words": 2000
+  },
+  "levels": {
+    "beginner": {
+      "range": "1-500",
+      "description": "最基础的日常词汇",
+      "estimated_time": "4-6周"
+    },
+    "elementary": {
+      "range": "501-1000",
+      "description": "基础扩展词汇",
+      "estimated_time": "6-8周"
+    },
+    "intermediate": {
+      "range": "1001-1500",
+      "description": "中级词汇",
+      "estimated_time": "8-10周"
+    },
+    "upper_intermediate": {
+      "range": "1501-2000",
+      "description": "中高级词汇",
+      "estimated_time": "10-12周"
+    }
+  },
+  "words": [
+    {
+      "word": "the",
+      "phonetic": "/ðə/, /ðiː/",
+      "pos": "article",
+      "meaning": "这个，那个（定冠词）",
+      "examples": [
+        "The cat is sleeping.",
+        "I love the music."
+      ],
+      "frequency": 1,
+      "level": "beginner"
+    },
+    {
+      "word": "be",
+      "phonetic": "/biː/",
+      "pos": "verb",
+      "meaning": "是，存在",
+      "examples": [
+        "I am a student.",
+        "She is happy.",
+        "They are friends."
+      ],
+      "frequency": 2,
+      "level": "beginner",
+      "forms": {
+        "present": ["am", "is", "are"],
+        "past": ["was", "were"],
+        "past_participle": "been"
+      }
+    },
+    {
+      "word": "to",
+      "phonetic": "/tuː/, /tə/",
+      "pos": "preposition",
+      "meaning": "到，向，给",
+      "examples": [
+        "Go to school.",
+        "Give it to me.",
+        "I want to learn."
+      ],
+      "frequency": 3,
+      "level": "beginner"
+    },
+    {
+      "word": "of",
+      "phonetic": "/əv/, /ɒv/",
+      "pos": "preposition",
+      "meaning": "...的，属于",
+      "examples": [
+        "A cup of tea.",
+        "The color of the sky.",
+        "One of my friends."
+      ],
+      "frequency": 4,
+      "level": "beginner"
+    },
+    {
+      "word": "and",
+      "phonetic": "/ænd/, /ənd/",
+      "pos": "conjunction",
+      "meaning": "和，与，并且",
+      "examples": [
+        "You and me.",
+        "Read and write.",
+        "Coffee and milk."
+      ],
+      "frequency": 5,
+      "level": "beginner"
+    },
+    {
+      "word": "a",
+      "phonetic": "/ə/, /eɪ/",
+      "pos": "article",
+      "meaning": "一个（不定冠词）",
+      "examples": [
+        "A book.",
+        "An apple.",
+        "I have a dog."
+      ],
+      "frequency": 6,
+      "level": "beginner"
+    },
+    {
+      "word": "in",
+      "phonetic": "/ɪn/",
+      "pos": "preposition",
+      "meaning": "在...里面，在...期间",
+      "examples": [
+        "In the room.",
+        "In 2024.",
+        "In the morning."
+      ],
+      "frequency": 7,
+      "level": "beginner"
+    },
+    {
+      "word": "that",
+      "phonetic": "/ðæt/",
+      "pos": "pronoun/conjunction",
+      "meaning": "那个，以至于",
+      "examples": [
+        "That is my car.",
+        "I know that you're right.",
+        "The book that I read."
+      ],
+      "frequency": 8,
+      "level": "beginner"
+    },
+    {
+      "word": "have",
+      "phonetic": "/hæv/",
+      "pos": "verb",
+      "meaning": "有，拥有",
+      "examples": [
+        "I have a pen.",
+        "She has two cats.",
+        "We have time."
+      ],
+      "frequency": 9,
+      "level": "beginner",
+      "forms": {
+        "present": ["have", "has"],
+        "past": "had",
+        "past_participle": "had"
+      }
+    },
+    {
+      "word": "I",
+      "phonetic": "/aɪ/",
+      "pos": "pronoun",
+      "meaning": "我",
+      "examples": [
+        "I am happy.",
+        "I like coffee.",
+        "I can help you."
+      ],
+      "frequency": 10,
+      "level": "beginner"
+    },
+    {
+      "word": "it",
+      "phonetic": "/ɪt/",
+      "pos": "pronoun",
+      "meaning": "它",
+      "examples": [
+        "It is a cat.",
+        "I like it.",
+        "It's raining."
+      ],
+      "frequency": 11,
+      "level": "beginner"
+    },
+    {
+      "word": "for",
+      "phonetic": "/fɔː(r)/",
+      "pos": "preposition",
+      "meaning": "为了，给，因为",
+      "examples": [
+        "This is for you.",
+        "Wait for me.",
+        "Thank you for helping."
+      ],
+      "frequency": 12,
+      "level": "beginner"
+    },
+    {
+      "word": "not",
+      "phonetic": "/nɒt/",
+      "pos": "adverb",
+      "meaning": "不，没有",
+      "examples": [
+        "I am not tired.",
+        "Do not worry.",
+        "It's not true."
+      ],
+      "frequency": 13,
+      "level": "beginner"
+    },
+    {
+      "word": "on",
+      "phonetic": "/ɒn/",
+      "pos": "preposition",
+      "meaning": "在...上面，关于",
+      "examples": [
+        "On the table.",
+        "On Monday.",
+        "A book on history."
+      ],
+      "frequency": 14,
+      "level": "beginner"
+    },
+    {
+      "word": "with",
+      "phonetic": "/wɪð/",
+      "pos": "preposition",
+      "meaning": "和...一起，用",
+      "examples": [
+        "Come with me.",
+        "Coffee with milk.",
+        "Write with a pen."
+      ],
+      "frequency": 15,
+      "level": "beginner"
+    },
+    {
+      "word": "he",
+      "phonetic": "/hiː/",
+      "pos": "pronoun",
+      "meaning": "他",
+      "examples": [
+        "He is my friend.",
+        "He likes music.",
+        "He can swim."
+      ],
+      "frequency": 16,
+      "level": "beginner"
+    },
+    {
+      "word": "as",
+      "phonetic": "/æz/, /əz/",
+      "pos": "conjunction/preposition",
+      "meaning": "作为，像...一样，当...时",
+      "examples": [
+        "As a teacher, I...",
+        "As tall as you.",
+        "As I said before."
+      ],
+      "frequency": 17,
+      "level": "beginner"
+    },
+    {
+      "word": "you",
+      "phonetic": "/juː/",
+      "pos": "pronoun",
+      "meaning": "你，你们",
+      "examples": [
+        "You are right.",
+        "I love you.",
+        "Can you help me?"
+      ],
+      "frequency": 18,
+      "level": "beginner"
+    },
+    {
+      "word": "do",
+      "phonetic": "/duː/",
+      "pos": "verb",
+      "meaning": "做，干",
+      "examples": [
+        "Do your homework.",
+        "What do you do?",
+        "I do my best."
+      ],
+      "frequency": 19,
+      "level": "beginner",
+      "forms": {
+        "present": ["do", "does"],
+        "past": "did",
+        "past_participle": "done"
+      }
+    },
+    {
+      "word": "at",
+      "phonetic": "/æt/",
+      "pos": "preposition",
+      "meaning": "在（某处/某时）",
+      "examples": [
+        "At home.",
+        "At 8 o'clock.",
+        "Look at me."
+      ],
+      "frequency": 20,
+      "level": "beginner"
+    },
+    {
+      "word": "this",
+      "phonetic": "/ðɪs/",
+      "pos": "pronoun/determiner",
+      "meaning": "这个",
+      "examples": [
+        "This is my book.",
+        "I like this song.",
+        "This morning."
+      ],
+      "frequency": 21,
+      "level": "beginner"
+    },
+    {
+      "word": "but",
+      "phonetic": "/bʌt/",
+      "pos": "conjunction",
+      "meaning": "但是，然而",
+      "examples": [
+        "I'm tired but happy.",
+        "Small but powerful.",
+        "I want to, but I can't."
+      ],
+      "frequency": 22,
+      "level": "beginner"
+    },
+    {
+      "word": "his",
+      "phonetic": "/hɪz/",
+      "pos": "pronoun",
+      "meaning": "他的",
+      "examples": [
+        "His name is Tom.",
+        "This is his book.",
+        "I met his brother."
+      ],
+      "frequency": 23,
+      "level": "beginner"
+    },
+    {
+      "word": "by",
+      "phonetic": "/baɪ/",
+      "pos": "preposition",
+      "meaning": "通过，被，在...旁边",
+      "examples": [
+        "By car.",
+        "Written by me.",
+        "Stand by the door."
+      ],
+      "frequency": 24,
+      "level": "beginner"
+    },
+    {
+      "word": "from",
+      "phonetic": "/frɒm/",
+      "pos": "preposition",
+      "meaning": "从，来自",
+      "examples": [
+        "From China.",
+        "From 9 to 5.",
+        "A gift from my friend."
+      ],
+      "frequency": 25,
+      "level": "beginner"
+    }
+  ],
+  "categories": {
+    "pronouns": ["I", "you", "he", "she", "it", "we", "they", "this", "that"],
+    "articles": ["a", "an", "the"],
+    "prepositions": ["in", "on", "at", "to", "from", "with", "by", "for", "of"],
+    "conjunctions": ["and", "but", "or", "so", "because", "if", "when"],
+    "verbs": ["be", "have", "do", "go", "get", "make", "see", "know", "think", "take"],
+    "common_adjectives": ["good", "new", "first", "last", "long", "great", "little", "own", "other", "old"],
+    "common_nouns": ["time", "person", "year", "way", "day", "thing", "man", "world", "life", "hand"]
+  },
+  "notes": "这是前25个最高频词汇的示例。完整词库包含2000个词，按相同格式存储。"
+}
