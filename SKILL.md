@@ -275,6 +275,36 @@ jq -n \
 - AI 扮演对话角色
 - 纠正发音和用词
 
+**学习资源推荐** ⭐ 新功能：
+当用户说"推荐口语视频"、"推荐英语播客"或"/speaking resources"时：
+
+```bash
+# 调用资源搜索脚本
+RESOURCES=$(~/.openclaw/workspace/skills/english-tutor/scripts/search-resources.sh intermediate video speaking)
+
+# 解析 JSON 结果
+echo "$RESOURCES" | jq -r '.recommended[] | "📺 \(.title)\n🔗 \(.url)\n难度：\(.level)\n特点：\(.description)\n时长：\(.duration)\n"'
+
+# 保存到飞书"学习资源"文档
+# 使用 feishu_doc 创建或更新文档
+```
+
+推荐内容包括：
+- **视频资源**：YouTube 频道（English with Lucy, Rachel's English, TED Talks）
+- **播客资源**：BBC 6 Minute English, All Ears English
+- **文章资源**：BBC Learning English, Breaking News English
+- **电影/美剧**：Friends, The Crown
+
+根据用户水平（beginner/intermediate/advanced）和主题（speaking/listening/grammar/vocabulary）推荐。
+
+使用方式：
+```
+用户：推荐口语学习视频
+用户：推荐英语播客
+用户：推荐技术英语文章
+用户：/speaking resources
+```
+
 ### 6. 阅读训练
 
 **推荐文章**：
