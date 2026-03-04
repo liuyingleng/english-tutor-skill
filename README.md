@@ -1,442 +1,258 @@
-# English Tutor Skill - Development Guide
+# English Tutor - 英语学习助手
 
-## 项目概述
+**基于 OpenClaw + 飞书知识库的智能英语教练**
 
-这是一个完整的英语学习智能体系统，设计用于从零基础到流利的全程陪伴。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**核心特性**:
-- 个性化引导和水平评估
-- 系统化学习路径（音标→词汇→语法→听说读写）
-- 科学复习机制（SRS间隔重复算法）
-- 进度追踪和数据分析
-- 知识库集成（飞书/Notion/Obsidian）
-- 智能提醒系统
+## 🎯 项目简介
 
-## 技术栈
+这是一个 OpenClaw Skill，通过 AI Agent + 飞书知识库的方式，提供个性化的英语学习体验。
 
-**当前版本（OpenClaw Skill）**:
-- Node.js 脚本
-- JSON 数据存储
-- Markdown 模板
-- OpenClaw 工具集成
+**核心特点**：
+- 🤖 **AI 驱动**：基于大语言模型，智能对话式教学
+- 📱 **多平台支持**：Web、微信、Telegram、Discord、QQ 等任何接入 OpenClaw 的平台
+- ☁️ **云端同步**：所有数据存储在飞书知识库，多端实时同步
+- 🎓 **系统化学习**：音标、词汇、语法、听说读写全方位训练
+- 🔄 **科学复习**：SRS 间隔重复算法，高效记忆
+- 📊 **进度追踪**：自动生成学习报告，可视化进度
 
-**未来版本（Java 独立应用）**:
-- 后端：Spring Boot + MyBatis/JPA
-- 前端：React/Vue + TypeScript
-- 数据库：PostgreSQL/MySQL
-- 缓存：Redis
-- 部署：Docker + 腾讯云轻量服务器
+## 🚀 快速开始
 
-## 目录结构
+### 前置要求
 
-```
-english-tutor/
-├── SKILL.md                    # Skill 文档（用户手册）
-├── README.md                   # 开发文档（本文件）
-├── scripts/                    # 核心脚本
-│   ├── onboarding.js           # ✅ 引导流程
-│   ├── assessment.js           # TODO: 水平测试
-│   ├── plan-generator.js       # TODO: 学习计划生成
-│   ├── phonics-trainer.js      # TODO: 音标训练
-│   ├── vocabulary-manager.js   # TODO: 词汇管理
-│   ├── grammar-coach.js        # TODO: 语法教练
-│   ├── listening-practice.js   # TODO: 听力练习
-│   ├── speaking-partner.js     # TODO: 口语对话
-│   ├── reading-guide.js        # TODO: 阅读指导
-│   ├── writing-tutor.js        # TODO: 写作批改
-│   ├── srs-engine.js           # TODO: SRS算法引擎
-│   ├── progress-tracker.js     # TODO: 进度追踪
-│   └── feishu-sync.js          # TODO: 飞书同步
-├── data/                       # 数据文件
-│   ├── phonics.json            # ✅ 音标数据（48个国际音标）
-│   ├── vocabulary/
-│   │   ├── high-frequency.json # ✅ 高频词库（前25词示例）
-│   │   ├── tech-terms.json     # ✅ 技术词汇
-│   │   └── categories.json     # TODO: 分类词库
-│   ├── grammar/
-│   │   ├── topics.json         # TODO: 语法点
-│   │   └── exercises.json      # TODO: 练习题
-│   ├── materials/
-│   │   ├── articles.json       # TODO: 文章库
-│   │   └── audio.json          # TODO: 音频资源
-│   └── templates/
-│       ├── daily-plan.md       # ✅ 每日计划模板
-│       └── weekly-report.md    # ✅ 周报模板
-├── assets/
-│   └── phonics-chart.png       # TODO: 音标表图片
-└── tests/                      # TODO: 测试文件
-    └── ...
+1. **安装 OpenClaw**
+   ```bash
+   npm install -g openclaw
+   ```
+
+2. **配置飞书集成**
+   - 在飞书开放平台创建应用
+   - 配置 OpenClaw 的飞书 skill
+   - 参考：[飞书配置指南](https://docs.openclaw.ai/zh-CN/tools/feishu)
+
+### 安装 Skill
+
+```bash
+# 克隆项目到 OpenClaw workspace
+cd ~/.openclaw/workspace/skills/
+git clone https://github.com/liuyingleng/english-tutor-skill.git english-tutor
+
+# 或者使用 clawhub 安装（未来）
+# clawhub install english-tutor
 ```
 
-## 数据存储
+### 开始使用
 
-学习数据存储在用户的 workspace：
+在任何接入 OpenClaw 的平台上，对 AI 说：
 
 ```
-~/.openclaw/workspace/memory/english-learning/
-├── profile.json              # 学习者档案
-├── vocabulary/
-│   ├── words.json            # 所有学过的词
-│   └── srs-schedule.json     # SRS复习计划
-├── phonics/
-│   └── progress.json         # 音标学习进度
-├── grammar/
-│   └── progress.json         # 语法进度
-├── daily-logs/
-│   └── YYYY-MM-DD.md         # 每日学习日志
-├── progress/
-│   └── stats.json            # 统计数据
-└── feishu-sync/
-    └── config.json           # 飞书同步配置
+我想学英语
 ```
 
-## 核心算法
+AI 会引导你完成初始设置，然后开始学习！
 
-### 1. SRS（间隔重复系统）
+## 📚 功能特性
 
-基于 SuperMemo SM-2 算法的改进版本：
+### 1. 个性化引导
+- 评估当前水平
+- 了解学习目标
+- 制定学习计划
+- 自动创建飞书知识库结构
 
-```javascript
-function calculateNextReview(item, quality) {
-  // quality: 0-5 (0=完全忘记, 5=完美记住)
-  
-  if (quality < 3) {
-    // 忘记了，重置间隔
-    item.interval = 1;
-    item.repetitions = 0;
-  } else {
-    if (item.repetitions === 0) {
-      item.interval = 1;
-    } else if (item.repetitions === 1) {
-      item.interval = 6;
-    } else {
-      item.interval = Math.round(item.interval * item.easeFactor);
-    }
-    item.repetitions++;
-  }
-  
-  // 调整难度系数
-  item.easeFactor = Math.max(1.3, 
-    item.easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
-  );
-  
-  item.nextReview = new Date(Date.now() + item.interval * 24 * 60 * 60 * 1000);
-  
-  return item;
+### 2. 音标训练
+- 48个国际音标系统学习
+- 发音说明 + 例词 + 中文对比
+- TTS 语音示范
+- 最小对立对练习
+
+### 3. 词汇学习
+- 高频词汇 2000+
+- 技术英语专项词汇
+- SRS 智能复习
+- 词汇量统计
+
+### 4. 语法练习
+- 系统化语法主题
+- 例句讲解
+- 练习题测试
+
+### 5. 听力训练
+- 分级听力材料
+- 听写练习
+- 理解测试
+
+### 6. 口语练习
+- 场景对话模拟
+- 发音纠正
+- 流利度训练
+
+### 7. 阅读训练
+- 技术文档阅读
+- 新闻文章
+- 生词标注
+
+### 8. 写作批改
+- 主题写作
+- 语法纠错
+- 用词建议
+
+### 9. 进度追踪
+- 学习天数统计
+- 词汇量增长曲线
+- 自动生成周报
+
+## 🗂️ 飞书知识库结构
+
+安装后会自动在你的飞书创建以下结构：
+
+```
+📁 英语学习
+  ├── 📄 学习档案
+  │   └── 个人信息、学习目标、当前水平、学习计划
+  ├── 📊 个人词汇库（多维表格）
+  │   └── 单词、音标、释义、例句、SRS数据
+  ├── 📝 每日学习日志/
+  │   ├── 2026-03-04.md
+  │   ├── 2026-03-05.md
+  │   └── ...
+  ├── 📈 学习进度报告/
+  │   ├── 第1周.md
+  │   ├── 第2周.md
+  │   └── ...
+  └── 🎯 学习计划
+      └── 阶段目标、每日任务、里程碑
+```
+
+## 💬 使用示例
+
+### 命令式
+
+```
+/english start          # 开始今天的学习
+/phonics learn          # 学习音标
+/vocab new              # 学习新词
+/vocab review           # 复习旧词
+/grammar today          # 今日语法
+/progress               # 查看进度
+```
+
+### 对话式
+
+```
+用户：教我音标
+AI：好的！今天我们学习5个元音音标...
+
+用户：我想学新单词
+AI：为你准备了20个高频词汇...
+
+用户：帮我复习一下
+AI：你有15个单词需要复习...
+
+用户：今天学什么？
+AI：根据你的学习计划，今天的任务是...
+
+用户：我的进度怎么样？
+AI：你已经坚持学习7天，词汇量达到150个...
+```
+
+## 🛠️ 技术实现
+
+### 架构
+
+```
+OpenClaw 平台
+    ↓
+English Tutor Skill (SKILL.md)
+    ↓
+飞书 API (feishu-doc, feishu-wiki, feishu-bitable)
+    ↓
+飞书知识库（数据存储）
+```
+
+### 核心组件
+
+- **SKILL.md**：AI 指令手册，定义如何教英语
+- **data/**：静态学习资源（音标、词汇、语法）
+- **scripts/**：辅助脚本（SRS算法、飞书同步）
+- **templates/**：飞书文档模板
+
+### SRS 算法
+
+使用 SuperMemo SM-2 算法：
+
+```bash
+# 计算下次复习时间
+./scripts/srs.sh '{"interval":1,"ease_factor":2.5,"repetitions":0}' 4
+
+# 输出
+{
+  "interval": 6,
+  "ease_factor": 2.6,
+  "repetitions": 1,
+  "next_review": "2026-03-10"
 }
 ```
 
-### 2. 难度自适应
+## 🌍 多平台支持
 
-根据用户表现动态调整：
+只要接入了 OpenClaw，就能使用：
 
-```javascript
-function adjustDifficulty(userStats) {
-  const accuracy = userStats.correct / userStats.total;
-  
-  if (accuracy > 0.8) {
-    return 'increase'; // 提升难度
-  } else if (accuracy < 0.6) {
-    return 'decrease'; // 降低难度
-  } else {
-    return 'maintain'; // 保持当前难度
-  }
-}
-```
+- ✅ Web 聊天
+- ✅ 微信
+- ✅ Telegram
+- ✅ Discord
+- ✅ QQ
+- ✅ Slack
+- ✅ 飞书
+- ✅ 钉钉
 
-### 3. 学习计划生成
+所有数据同步到飞书，无缝切换！
 
-基于用户水平和时间分配：
+## 📖 文档
 
-```javascript
-function generateDailyPlan(profile, date) {
-  const { currentLevel, dailyTimeMinutes } = profile;
-  
-  // 时间分配比例
-  const allocation = {
-    'absolute_beginner': {
-      phonics: 0.3,
-      vocabulary: 0.3,
-      grammar: 0.2,
-      listening: 0.2
-    },
-    // ... 其他等级
-  };
-  
-  // 生成具体任务
-  const tasks = {
-    phonics: generatePhonicsTasks(level, time),
-    vocabulary: generateVocabTasks(level, time),
-    // ...
-  };
-  
-  return tasks;
-}
-```
+- [安装配置指南](SETUP.md)
+- [使用手册](SKILL.md)
+- [开发文档](CONTRIBUTING.md)
+- [API 参考](API.md)
 
-## API 设计（为 Java 应用准备）
+## 🤝 贡献
 
-### RESTful Endpoints
+欢迎贡献！
 
-```
-# 用户管理
-POST   /api/users/register          # 注册
-POST   /api/users/login             # 登录
-GET    /api/users/profile           # 获取档案
-PUT    /api/users/profile           # 更新档案
+- 提交 Issue 报告问题
+- 提交 PR 改进功能
+- 分享学习心得
+- 完善词汇库和学习材料
 
-# 引导流程
-POST   /api/onboarding/start        # 开始引导
-POST   /api/onboarding/assessment   # 提交评估
-POST   /api/onboarding/complete     # 完成引导
+## 📝 开发计划
 
-# 学习计划
-GET    /api/plan/daily              # 获取每日计划
-GET    /api/plan/weekly             # 获取周计划
-POST   /api/plan/adjust             # 调整计划
-
-# 词汇学习
-GET    /api/vocabulary/new          # 获取新词
-GET    /api/vocabulary/review       # 获取复习词
-POST   /api/vocabulary/learn        # 记录学习
-POST   /api/vocabulary/test         # 提交测试
-
-# 音标训练
-GET    /api/phonics/list            # 音标列表
-GET    /api/phonics/learn/:symbol   # 学习音标
-POST   /api/phonics/practice        # 练习记录
-
-# 语法学习
-GET    /api/grammar/topics          # 语法主题
-GET    /api/grammar/exercises       # 练习题
-POST   /api/grammar/submit          # 提交答案
-
-# 听力训练
-GET    /api/listening/materials     # 听力材料
-POST   /api/listening/complete      # 完成记录
-
-# 口语练习
-POST   /api/speaking/session        # 开始对话
-POST   /api/speaking/evaluate       # 评估发音
-
-# 阅读训练
-GET    /api/reading/articles        # 文章列表
-POST   /api/reading/complete        # 完成记录
-
-# 写作批改
-POST   /api/writing/submit          # 提交作文
-GET    /api/writing/feedback/:id    # 获取反馈
-
-# 进度追踪
-GET    /api/progress/stats          # 统计数据
-GET    /api/progress/history        # 历史记录
-GET    /api/progress/milestones     # 里程碑
-
-# 数据同步
-POST   /api/sync/feishu             # 同步到飞书
-GET    /api/sync/export             # 导出数据
-```
-
-### 数据模型
-
-```java
-// User Profile
-class UserProfile {
-    Long id;
-    String name;
-    String email;
-    LocalDate startDate;
-    List<String> goals;
-    String currentLevel;
-    Integer dailyTimeMinutes;
-    List<String> preferredTimes;
-    String learningStyle;
-    List<String> interests;
-    Map<String, Object> customSettings;
-}
-
-// Vocabulary Item
-class VocabularyItem {
-    Long id;
-    String word;
-    String phonetic;
-    String pos;
-    String meaning;
-    List<String> examples;
-    Integer frequency;
-    String level;
-    LocalDateTime learnedAt;
-    Integer reviewCount;
-    Double easeFactor;
-    Integer interval;
-    LocalDateTime nextReview;
-}
-
-// Learning Session
-class LearningSession {
-    Long id;
-    Long userId;
-    LocalDate date;
-    String type; // phonics, vocabulary, grammar, etc.
-    Integer durationMinutes;
-    Map<String, Object> content;
-    Map<String, Object> results;
-    LocalDateTime createdAt;
-}
-
-// Progress Stats
-class ProgressStats {
-    Long userId;
-    Integer totalStudyDays;
-    Integer totalStudyMinutes;
-    Integer vocabularySize;
-    Integer lessonsCompleted;
-    Map<String, Integer> skillLevels;
-    LocalDateTime lastUpdated;
-}
-```
-
-## 开发路线图
-
-### Phase 1: 核心功能（当前）✅
-
-- [x] 项目结构搭建
-- [x] 引导流程脚本
-- [x] 音标数据准备
-- [x] 词汇数据准备（示例）
-- [x] 模板文件
-
-### Phase 2: 基础模块（本周）
-
-- [ ] 音标训练模块
-- [ ] 词汇学习模块
-- [ ] SRS 复习引擎
-- [ ] 进度追踪系统
-- [ ] 飞书同步功能
-
-### Phase 3: 扩展功能（本月）
-
+- [x] 基础架构
+- [x] 音标训练模块
+- [x] 词汇学习模块
+- [x] SRS 复习系统
 - [ ] 语法练习模块
 - [ ] 听力训练模块
-- [ ] 口语对话模块
+- [ ] 口语练习模块
 - [ ] 阅读训练模块
 - [ ] 写作批改模块
-- [ ] 智能提醒系统
+- [ ] 进度可视化
+- [ ] 多语言支持
 
-### Phase 4: 优化与测试
-
-- [ ] 性能优化
-- [ ] 单元测试
-- [ ] 集成测试
-- [ ] 用户测试
-- [ ] Bug 修复
-
-### Phase 5: Java 应用开发
-
-- [ ] Spring Boot 后端
-- [ ] RESTful API
-- [ ] 数据库设计
-- [ ] 前端开发
-- [ ] 部署上线
-
-## 如何贡献
-
-### 开发环境设置
-
-```bash
-# 克隆项目
-cd ~/.openclaw/workspace/skills/english-tutor
-
-# 安装依赖（如果需要）
-npm install
-
-# 运行测试
-npm test
-```
-
-### 添加新功能
-
-1. 在 `scripts/` 目录创建新模块
-2. 在 `data/` 目录添加必要数据
-3. 更新 `SKILL.md` 文档
-4. 编写测试用例
-5. 提交 PR
-
-### 代码规范
-
-- 使用 ES6+ 语法
-- 函数命名：驼峰式（camelCase）
-- 类命名：帕斯卡式（PascalCase）
-- 常量命名：全大写下划线（UPPER_SNAKE_CASE）
-- 注释：JSDoc 格式
-
-## 测试
-
-```bash
-# 运行所有测试
-npm test
-
-# 运行特定测试
-npm test -- onboarding
-
-# 生成覆盖率报告
-npm run coverage
-```
-
-## 部署
-
-### OpenClaw Skill 部署
-
-```bash
-# 复制到 skills 目录
-cp -r english-tutor ~/.openclaw/workspace/skills/
-
-# 重启 OpenClaw
-openclaw gateway restart
-```
-
-### Java 应用部署（未来）
-
-```bash
-# 构建 Docker 镜像
-docker build -t english-tutor:latest .
-
-# 推送到服务器
-docker push your-registry/english-tutor:latest
-
-# 在服务器上运行
-docker-compose up -d
-```
-
-## 常见问题
-
-### Q: 如何重置学习进度？
-
-```bash
-rm -rf ~/.openclaw/workspace/memory/english-learning/
-```
-
-### Q: 如何备份学习数据？
-
-```bash
-tar -czf english-learning-backup.tar.gz \
-  ~/.openclaw/workspace/memory/english-learning/
-```
-
-### Q: 如何导出数据到 Java 应用？
-
-数据已经是标准 JSON 格式，可以直接导入数据库。
-
-## 许可证
+## 📄 许可证
 
 MIT License
 
-## 联系方式
+## 🙏 致谢
 
-- GitHub: [待创建]
-- Issues: [待创建]
-- Email: [你的邮箱]
+- [OpenClaw](https://openclaw.ai) - AI Agent 平台
+- [飞书开放平台](https://open.feishu.cn) - 知识库存储
+- SuperMemo - SRS 算法
+
+## 📧 联系方式
+
+- GitHub: [@liuyingleng](https://github.com/liuyingleng)
+- Issues: [提交问题](https://github.com/liuyingleng/english-tutor-skill/issues)
 
 ---
 
-**开始开发**: 从 `scripts/phonics-trainer.js` 开始实现第一个功能模块！
+**开始你的英语学习之旅！** 🚀
